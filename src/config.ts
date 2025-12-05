@@ -1,23 +1,48 @@
 export const SITE = {
-  website: "https://astro-paper.pages.dev/", // replace this with your deployed domain
-  author: "Sat Naing",
-  profile: "https://satnaing.dev/",
-  desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
-  title: "AstroPaper",
+  website: "https://reviblyetechu.vercel.app/",
+  author: "Reviblye Techu",
+  title: "Reviblye Techu",
+  description: "A minimal, accessible and SEO-friendly Astro blog theme.",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
-  postPerIndex: 4,
-  postPerPage: 4,
+  postPerPage: 10,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
-  showArchives: true,
-  showBackButton: true, // show back button in post detail
-  editPost: {
-    enabled: true,
-    text: "Edit page",
-    url: "https://github.com/satnaing/astro-paper/edit/main/",
+  showBackButton: true,
+};
+
+export const NAV_LINKS = [
+  { text: "Home", href: "/" },
+  { text: "Blog", href: "/blog" },
+  { text: "About", href: "/about" },
+  { text: "Tags", href: "/tags" },
+];
+
+export const SOCIAL_LINKS = {
+  github: "https://github.com/bytecascade11",
+  twitter: "",
+  youtube: "",
+  instagram: "",
+  linkedin: "",
+  mastodon: "",
+};
+
+export const FOOTER_LINKS = [
+  { text: "About the Editor", href: "/about-the-editor" },
+  { text: "Contact Us", href: "/contact-us" },
+  { text: "Privacy Policy", href: "/privacy-policy" },
+  { text: "Terms & Conditions", href: "/terms-conditions" },
+  { text: "Disclaimer", href: "/disclaimer" },
+];
+
+export const ANALYTICS = {
+  umamiWebsiteId: "",
+};
+
+export const BLOG = {
+  disabled: false,
+  postsPerPage: 10,
+  blog: {
+    disabled: false,
+    path: "/blog",
   },
-  dynamicOgImage: true,
-  dir: "ltr", // "rtl" | "auto"
-  lang: "en", // html lang code. Set this empty and default will be "en"
-  timezone: "Asia/Bangkok", // Default global timezone (IANA format) https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-} as const;
+};
