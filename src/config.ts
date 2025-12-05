@@ -1,5 +1,5 @@
 export const SITE = {
-  website: "https://reviivyetechu.vercel.app/",     // ← change this to your real URL later
+  website: "https://reviivyetechu.vercel.app/",
   author: "Reviiyee Techu",
   title: "Reviiyee Techu",
   description: "A minimal, accessible and SEO-friendly Astro blog theme.",
@@ -7,19 +7,23 @@ export const SITE = {
   lightAndDarkMode: true,
   postPerPage: 10,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
-  showBackButton: true,
 
-  // ——— ADDING ALL THE MISSING KEYS THAT FIX THE 17 ERRORS ———
+  // ←←←←←←←←←←←←←←←←←←←←←← NEW KEYS THAT FIX THE LAST 4 ERRORS ←←←←←←←←←←←←←←←←←←←←←←
+  lang: "en",                    // fixes Layout.astro lang error
+  dir: "ltr",                    // fixes Layout.astro dir error (use "rtl" only for Arabic/Hebrew)
+  timezone: "UTC",               // fixes Datetime.astro error – change to your real timezone later
   desc: "A minimal, accessible and SEO-friendly Astro blog theme.",
-  profile: "/avatar.png",                    // put your photo in /public/avatar.png if you want
-  postPerIndex: 10,                          // same as postPerPage or change it
-  editPost: {
-    enabled: false,                          // set true + add url below if you want "Edit on GitHub"
-    url: "https://github.com/yourname/yourname.github.io/edit/main/src/content/blog",
-  },
-  dynamicOgImage: true,                      // keeps the nice auto OG images working
+  profile: "/avatar.png",
+  postPerIndex: 10,
   showArchives: true,
-  // ————————————————————————————————
+  dynamicOgImage: true,
+
+  editPost: {
+    enabled: false,              // change to true when you want the button
+    url: "https://github.com/bytecascade11/reviivyetechu/edit/main/src/content/blog",
+    text: "Edit this page",      // ← this fixes EditPost.astro error
+  },
+  // ←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←
 } as const;
 
 export const NAV_LINKS = [
