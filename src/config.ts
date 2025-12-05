@@ -29,17 +29,17 @@ export const NAV_LINKS = [
   { text: "Blog", href: "/blog" },
   { text: "About", href: "/about" },
   { text: "Tags", href: "/tags" },
-];
+] as const;
 
 export const SOCIAL_LINKS = {
-  {
   github: "https://github.com/bytecascade11",
   twitter: "",
   youtube: "",
+  "",
   instagram: "",
-  linkedin: "",
-  mastodon: "",
-};
+  linkedin:  "",
+  mastodon:  "",
+} as const;
 
 export const FOOTER_LINKS = [
   { text: "About the Editor", href: "/about-the-editor" },
@@ -47,11 +47,11 @@ export const FOOTER_LINKS = [
   { text: "Privacy Policy", href: "/privacy-policy" },
   { text: "Terms & Conditions", href: "/terms-conditions" },
   { text: "Disclaimer", href: "/disclaimer" },
-];
+] as const;
 
 export const ANALYTICS = {
   umamiWebsiteId: "",
-};
+} as const;
 
 export const BLOG = {
   disabled: false,
@@ -64,4 +64,4 @@ export const BLOG = {
     disabled: false,
     pathname: "blog",
   },
-};
+} as const;
